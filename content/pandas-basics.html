@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>Pandas 醫療資料清洗入門</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>MedData Python Wiki</h1>
+        <p><a href="../index.html" style="color: #94a3b8;">← 返回首頁</a></p>
+    </header>
+    <div class="container" style="margin-top: 2rem;">
+        <h2>單元一：Pandas 醫療資料清洗入門</h2>
+        <p>示範如何使用 Python 的 Pandas 處理病患就診紀錄與缺失值。</p>
+        <pre><code>import pandas as pd
+df = pd.read_csv('patient_records.csv')
+print(df.head())
+# 補齊缺失值
+df['blood_pressure'] = df['blood_pressure'].fillna(df['blood_pressure'].mean())</code></pre>
+    </div>
+    <footer>
+        <p>&copy; 2026 梁又權</p>
+    </footer>
+</body>
+</html>
